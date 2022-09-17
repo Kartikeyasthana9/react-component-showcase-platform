@@ -7,7 +7,7 @@
     "dev": "nodemon index"
   },
   "keywords": [],
-  "author": "",.3
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
