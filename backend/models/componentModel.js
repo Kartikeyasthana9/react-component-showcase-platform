@@ -1,13 +1,13 @@
-const { ObjectID } = require('bson');
-const { model, Schema } = require('../connection');
+const { model, Schema, Types } = require('../connection');
 
 const mySchema = new Schema({
     title: String,
-    descript: String,
-    tags: array,
-    imports: string,
-    code: string,
-    createdBy: ObjectID,
+    description: String,
+    tags: Array,
+    imports: String,
+    code: String,
+    // createdBy: {type : Types.ObjectId, ref: 'userCollection'},
+    createdBy: String,
     createdAt: Date
 
 })
