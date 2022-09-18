@@ -50,7 +50,7 @@ const AddComponent = () => {
                                 <label>Title</label>
                                 <input type="text" className='form-control' id="title" onChange={handleChange} value={values.title} />
                                 <label>Description</label>
-                                <input type="text" className='form-control' id="description" onChange={handleChange} value={values.description} />
+                                <input type="text-area" className='form-control' id="description" onChange={handleChange} value={values.description} />
                                 <label>Imports</label>
                                 <input type="text" className='form-control' id="imports" onChange={handleChange} value={values.imports} />
                                 <label>Code</label>

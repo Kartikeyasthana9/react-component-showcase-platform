@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-primary">
+        <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
             {/* Container wrapper */}
             <div className="container-fluid">
                 {/* Toggle button */}
@@ -31,7 +31,7 @@ const NavBar = () => {
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">
-                                Link
+                                AddComponent
                             </a>
                         </li>
                         {/* Navbar dropdown */}
@@ -68,9 +68,7 @@ const NavBar = () => {
                                 </li>
                             </ul>
                         </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
-                        </li>
+                        
                     </ul>
                     {/* Left links */}
                 </div>
