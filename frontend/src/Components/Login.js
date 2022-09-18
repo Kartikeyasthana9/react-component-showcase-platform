@@ -1,206 +1,113 @@
+import { Formik } from 'formik';
 import React from 'react'
 
 
 const Login = () => {
-  return (
-    <div className='bg-secondary vh-90 width-80'>
-      <div className='col-md-4 mx-auto '>
-        {/* Pills navs */}
-        <ul className="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
-          <li className="nav-item" role="presentation">
-            <a
-              className="nav-link active"
-              id="tab-login"
-              data-mdb-toggle="pill"
-              href="#pills-login"
-              role="tab"
-              aria-controls="pills-login"
-              aria-selected="true"
-            >
-              Login
-            </a>
-          </li>
-          <li className="nav-item" role="presentation">
-            <a
-              className="nav-link"
-              id="tab-register"
-              data-mdb-toggle="pill"
-              href="#pills-register"
-              role="tab"
-              aria-controls="pills-register"
-              aria-selected="false"
-            >
-              Register
-            </a>
-          </li>
-        </ul>
-        {/* Pills navs */}
-        {/* Pills content */}
-        <div className="tab-content">
-          <div
-            className="tab-pane fade show active"
-            id="pills-login"
-            role="tabpanel"
-            aria-labelledby="tab-login">
 
-            <formik>
-              <div className="text-center mb-3">
-                <p>Sign in with:</p>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-facebook-f" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-google" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-twitter" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-github" />
-                </button>
-              </div>
-              <p className="text-center">or:</p>
-              {/* Email input */}
-              <div className="form-outline mb-4">
-                <input type="email" id="loginName" className="form-control" />
-                <label className="form-label" htmlFor="loginName">
-                  Email or username
-                </label>
-              </div>
-              {/* Password input */}
-              <div className="form-outline mb-4">
-                <input type="password" id="loginPassword" className="form-control" />
-                <label className="form-label" htmlFor="loginPassword">
-                  Password
-                </label>
-              </div>
-              {/* 2 column grid layout */}
-              <div className="row mb-4">
-                <div className="col-md-6 d-flex justify-content-center">
-                  {/* Checkbox */}
-                  <div className="form-check mb-3 mb-md-0">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      defaultValue=""
-                      id="loginCheck"
-                      defaultChecked=""
-                    />
-                    <label className="form-check-label" htmlFor="loginCheck">
-                      {" "}
-                      Remember me{" "}
-                    </label>
+  // 1. submit fuction
+  const loginSubmit = (formdata) => {
+    console.log(formdata);
+  }
+
+  // 2. locate/create the form tag
+  // 3. use Formik on form tag
+  return (
+    <section className="vh-100" style={{ backgroundColor: "#f5bfca" }}>
+      <div className="container py-5 h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col col-xl-10">
+            <div className="card" style={{ borderRadius: "1rem" }}>
+              <div className="row g-0">
+                <div className="col-md-6 col-lg-5 d-none d-md-block">
+                  <img
+                    src="https://nextbigtechnology.com/wp-content/uploads/2020/03/2-4.jpg"
+                    alt="login form"
+                    className="img-fluid" style={{ background: "cover" }}
+                    style={{ borderRadius: "1rem 0 0 1rem" }}
+                  />
+                </div>
+                <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                  <div className="card-body p-4 p-lg-5 text-black">
+
+                    <Formik initialValues={{ email: '', password: '' }} onSubmit={loginSubmit}>
+                      {
+                        ({ values, handleSubmit, handleChange }) => (
+
+                          <form onSubmit={handleSubmit}>
+                            <div className="d-flex align-items-center mb-3 pb-1">
+                              <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" height="40" />
+                              <span className="h2 fw-bold mb-0">React Component ShowCase Platform </span>
+                            </div>
+                            <h5
+                              className="fw-normal mb-3 pb-3"
+                              style={{ letterSpacing: 1 }}
+                            >
+                              Sign into your account
+                            </h5>
+                            <div className="form-outline mb-4">
+                              <input
+                                type="email"
+                                id="email"
+                                value={values.email}
+                                onChange={handleChange}
+                                className="form-control form-control-lg"
+                              />
+                              <label className="form-label" htmlFor="form3Example3cg">
+                                Email Address
+                              </label>
+                            </div>
+                            <div className="form-outline mb-4">
+                              <input
+                                type="password"
+                                id="password"
+                                value={values.password}
+                                onChange={handleChange}
+                                className="form-control form-control-lg"
+                              />
+                              <label className="form-label" htmlFor="form2Example17">
+                                Password
+                              </label>
+                            </div>
+                            <div className="pt-1 mb-4">
+                              <button
+                                className="btn btn-dark btn-lg btn-block"
+                                type="submit"
+                              >
+                                Login
+                              </button>
+                            </div>
+                            <a className="small text-muted" href="#!">
+                              Forgot password?
+                            </a>
+                            <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
+                              Don't have an account?{" "}
+                              <a href="#!" style={{ color: "#393f81" }}>
+                                Register here
+                              </a>
+                            </p>
+                            <a href="#!" className="small text-muted">
+                              Terms of use.
+                            </a>
+                            <a href="#!" className="small text-muted">
+                              Privacy policy
+                            </a>
+                          </form>
+                        )
+
+
+                      }
+
+                    </Formik>
                   </div>
                 </div>
-                <div className="col-md-6 d-flex justify-content-center">
-                  {/* Simple link */}
-                  <a href="#!">Forgot password?</a>
-                </div>
               </div>
-              {/* Submit button */}
-              <button type="submit" className="btn btn-primary btn-block mb-4">
-                Sign in
-              </button>
-              {/* Register buttons */}
-              <div className="text-center">
-                <p>
-                  Not a member? <a href="#!">Register</a>
-                </p>
-              </div>
-            </formik>
-          </div>
-          <div
-            className="tab-pane fade"
-            id="pills-register"
-            role="tabpanel"
-            aria-labelledby="tab-register"
-          >
-            <formik>
-              <div className="text-center mb-3">
-                <p>Sign up with:</p>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-facebook-f" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-google" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-twitter" />
-                </button>
-                <button type="button" className="btn btn-link btn-floating mx-1">
-                  <i className="fab fa-github" />
-                </button>
-              </div>
-              <p className="text-center">or:</p>
-              {/* Name input */}
-              <div className="form-outline mb-4">
-                <input type="text" id="registerName" className="form-control" />
-                <label className="form-label" htmlFor="registerName">
-                  Name
-                </label>
-              </div>
-              {/* Username input */}
-              <div className="form-outline mb-4">
-                <input type="text" id="registerUsername" className="form-control" />
-                <label className="form-label" htmlFor="registerUsername">
-                  Username
-                </label>
-              </div>
-              {/* Email input */}
-              <div className="form-outline mb-4">
-                <input type="email" id="registerEmail" className="form-control" />
-                <label className="form-label" htmlFor="registerEmail">
-                  Email
-                </label>
-              </div>
-              {/* Password input */}
-              <div className="form-outline mb-4">
-                <input
-                  type="password"
-                  id="registerPassword"
-                  className="form-control"
-                />
-                <label className="form-label" htmlFor="registerPassword">
-                  Password
-                </label>
-              </div>
-              {/* Repeat Password input */}
-              <div className="form-outline mb-4">
-                <input
-                  type="password"
-                  id="registerRepeatPassword"
-                  className="form-control"
-                />
-                <label className="form-label" htmlFor="registerRepeatPassword">
-                  Repeat password
-                </label>
-              </div>
-              {/* Checkbox */}
-              <div className="form-check d-flex justify-content-center mb-4">
-                <input
-                  className="form-check-input me-2"
-                  type="checkbox"
-                  defaultValue=""
-                  id="registerCheck"
-                  defaultChecked=""
-                  aria-describedby="registerCheckHelpText"
-                />
-                <label className="form-check-label" htmlFor="registerCheck">
-                  I have read and agree to the terms
-                </label>
-              </div>
-              {/* Submit button */}
-              <button type="submit" className="btn btn-primary btn-block mb-3">
-                Sign in
-              </button>
-            </formik>
+            </div>
           </div>
         </div>
-        {/* Pills content */}
       </div>
+    </section>
 
 
-    </div>
   )
 }
 

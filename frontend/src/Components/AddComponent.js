@@ -47,14 +47,14 @@ const AddComponent = () => {
                     onSubmit={userSubmit}>
                         {({values, handleSubmit, handleChange}) => (
                             <form onSubmit={handleSubmit}>
-                                <label>Name</label>
-                                <input className='form-control' id="name" onChange={handleChange} value={values.name} />
-                                <label>Email</label>
-                                <input className='form-control' id="email" onChange={handleChange} value={values.email} />
-                                <label>Password</label>
-                                <input type="password" className='form-control' id="password" onChange={handleChange} value={values.password} />
-                                <label>Age</label>
-                                <input className='form-control' id="age" onChange={handleChange} value={values.age} />
+                                <label>Title</label>
+                                <input type="text" className='form-control' id="title" onChange={handleChange} value={values.title} />
+                                <label>Description</label>
+                                <input type="text" className='form-control' id="description" onChange={handleChange} value={values.description} />
+                                <label>Imports</label>
+                                <input type="text" className='form-control' id="imports" onChange={handleChange} value={values.imports} />
+                                <label>Code</label>
+                                <input type="text" className='form-control' id="code" onChange={handleChange} value={values.code} />
                             <button type="submit" className='btn btn-primary mt-4'>Submit</button>
                             </form>
                         )}
