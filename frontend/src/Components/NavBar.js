@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-secondary">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-secondary">
             {/* Container wrapper */}
             <div className="container-fluid">
                 {/* Toggle button */}
@@ -30,9 +31,9 @@ const NavBar = () => {
                             </a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <NavLink className="nav-link" to="/addcomponent">
                                 AddComponent
-                            </a>
+                            </NavLink>
                         </li>
                         {/* Navbar dropdown */}
                         <li className="nav-item dropdown">
