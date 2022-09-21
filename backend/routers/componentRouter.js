@@ -67,4 +67,17 @@ router.delete('/delete/:id', (req, res) => {
 
 
 })
+
+router.get('/getbyid/:id', (req, res) => {
+    Model.findById(req.params.id)
+        .then((result) => {
+            res.json(result);
+
+        }).catch((err) => {
+            res.json(err);
+
+        });
+
+
+})
 module.exports = router;

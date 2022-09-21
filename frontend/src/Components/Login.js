@@ -12,18 +12,18 @@ const Login = () => {
   // 2. locate/create the form tag
   // 3. use Formik on form tag
   return (
-    <section className="vh-100" style={{ backgroundColor: "#f5bfca" }}>
-      <div className="container py-5 h-100">
-        <div className="row d-flex justify-content-center align-items-center h-100">
+    <section className="vh-100" style={{ backgroundImage: "url(https://community-cdn-digitalocean-com.global.ssl.fastly.net/gbM2MfLujKBL6hhhdbEzu8v8)"}}>
+      <div className="container pt-5 h-100">
+        <div className="row g-0 ">
           <div className="col col-xl-10">
-            <div className="card" style={{ borderRadius: "1rem" }}>
+            <div className="card" style={{ borderRadius: "2rem" }}>
               <div className="row g-0">
                 <div className="col-md-6 col-lg-5 d-none d-md-block">
                   <img
                     src="https://nextbigtechnology.com/wp-content/uploads/2020/03/2-4.jpg"
                     alt="login form"
-                    className="img-fluid" style={{ background: "cover" }}
-                    style={{ borderRadius: "1rem 0 0 1rem" }}
+                    className="img-fluid" 
+                    // style={{  borderRadius: "1rem 0 0 1rem" }}
                   />
                 </div>
                 <div className="col-md-6 col-lg-7 d-flex align-items-center">
