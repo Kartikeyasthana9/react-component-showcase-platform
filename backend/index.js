@@ -2,6 +2,7 @@
 const express = require('express')
 const userRouter = require('./routers/userRouter');
 const componentRouter = require('./routers/componentRouter');
+const utilRouter = require('./routers/util');
 const cors = require('cors');
 
 // initialising express
@@ -16,6 +17,8 @@ app.use(cors({ origin: ['http://localhost:3000'] }))
 // middleware 
 app.use('/user', userRouter);
 app.use('/comp', componentRouter);
+app.use('/util', utilRouter);
+app.use(express.static('./static/uploads'));
 
 // RRoute
 app.get('/', (req, res) => {
@@ -27,7 +30,6 @@ app.get('/', (req, res) => {
 
 app.get('/home', (req, res) => {
     res.send('Respond ');
-
 })
 
 app.listen(port, () => {

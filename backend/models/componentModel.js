@@ -6,6 +6,7 @@ const mySchema = new Schema({
     tags: Array,
     imports: String,
     code: String,
+    image: String,
     // createdBy: {type : Types.ObjectId, ref: 'userCollection'},
     createdBy: String,
     createdAt: Date
