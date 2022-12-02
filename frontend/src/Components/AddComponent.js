@@ -58,7 +58,7 @@ const AddComponent = () => {
             <div className="col-md-10 mx-auto">
                 <div className="card mt-5">
                     <div className="row">
-                        <div className="col-md-5">
+                        <div className="col-md-4">
                             <div
                                 style={{
                                     backgroundImage: 'url(https://i.pinimg.com/736x/e8/b9/aa/e8b9aa48b889d6d81670f10cd616cc4b--logo-s-corporate-design.jpg)',

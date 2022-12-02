@@ -19,7 +19,7 @@ function App() {
           <Route element={<Login />} path="login" />
 
           <Route element={<AddComponent />} path="addcomponent" />
-          <Route element={<ListComponent></ListComponent>} path="listcomponent" />
+          <Route element={<ListComponent/>} path="listcomponent" />
           <Route element={<ViewComponent />} path="viewer/:id" />
           <Route element={<Test />} path="test" />
 

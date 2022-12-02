@@ -20,7 +20,7 @@ const NavBar = () => {
                 </button>
                 {/* Collapsible wrapper */}
                 <div
-                    // className="collapse navbar-collapse justify-content-center"
+                    className="collapse navbar-collapse justify-content-center"
                     id="navbarCenteredExample"
                 >
                     {/* Left links */}
@@ -40,6 +40,11 @@ const NavBar = () => {
                                 ListComponent
                             </NavLink>
                         </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/test">
+                                TEST
+                            </NavLink>
+                        </li>
                         
                         
                         
@@ -50,6 +55,11 @@ const NavBar = () => {
             </div>
             {/* Container wrapper */}
         </nav>
+
+
+
+
+
 
 
 

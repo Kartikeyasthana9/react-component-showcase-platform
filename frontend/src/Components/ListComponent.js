@@ -48,25 +48,20 @@ const ListComponent = () => {
     return (
         <div>
 
-            <header>
 
-                {/* Jumbotron */}
-                <div className="p-5 text-center bg-light">
-                    <h3 className="mb-3">Heading</h3>
-                    
-                        <div className="form-outline">
-                            <input type="search" id="form1" className="form-control"  />
-                            
-                        
-                        <button type="button" className="btn btn-primary">
-                            <i className="fas fa-search" />
-                        </button>
-                    </div>
-
-
+           
+            {/* <div className="input-group">
+                <div className="form-outline">
+                    <input id="search-input" type="search" className="form-control" />
+                    <label className="form-label" htmlFor="form1">
+                        Search
+                    </label>
                 </div>
-                {/* Jumbotron */}
-            </header>
+                <button id="search-button" type="button" className="btn btn-primary">
+                    <i className="fas fa-search" />
+                </button>
+            </div> */}
+
 
             <div className='container-fluid'>
                 <h1 className='text-center'> </h1>
