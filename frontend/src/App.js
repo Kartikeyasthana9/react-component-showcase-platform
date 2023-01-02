@@ -3,10 +3,13 @@ import AddComponent from "./Components/AddComponent";
 
 import ListComponent from "./Components/ListComponent";
 import Login from './Components/Login';
+import Register from './Components/Register';
+import Home from "./Components/Home";
 import NavBar from "./Components/NavBar";
 import Test from "./Components/Test";
 import ViewComponent from "./Components/ViewComponent";
 import logo from './logo.svg';
+import { Toaster } from "react-hot-toast";
 
 
 function App() {
@@ -15,8 +18,10 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route element={<AddComponent />} path="/" />
-          <Route element={<Login />} path="login" />
+          
+          <Route element={<Login />} path="/" />
+          <Route element={<Register/>} path="register"/>
+          <Route element={<Home/>} path="home"/>
 
           <Route element={<AddComponent />} path="addcomponent" />
           <Route element={<ListComponent/>} path="listcomponent" />
